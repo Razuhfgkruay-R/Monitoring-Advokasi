@@ -114,16 +114,16 @@
     .app-card::-webkit-scrollbar { display: none; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* Layout Logo Sejajar */
+    /* Layout Logo Sejajar - DIEDIT (LEBIH BESAR) */
     .logo { 
       display: flex; 
       justify-content: center; 
       align-items: center; 
-      margin-bottom: 20px; 
-      gap: 16px; 
+      margin-bottom: 16px; 
+      gap: 20px; 
     }
     .logo img { 
-      height: 65px; 
+      height: 90px; /* Ukuran diperbesar dari 65px ke 90px */
       width: auto; 
       object-fit: contain;
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15)); 
@@ -659,7 +659,7 @@
       cekStatusTombolTambah();
     }
 
-    // MODAL DROPDOWN PELANGGARAN DINAMIS
+    // MODAL DROPDOWN PILIH PELANGGARAN
     function bukaModalPilihPelanggaran() {
       const container = document.getElementById("dynamicPelanggaranList");
       const titleEl = document.getElementById("modalPilihTitle");
@@ -942,8 +942,8 @@
         div.className = "rekap-card";
 
         let badgeColorClass = "poin-green";
-        if (item.sisaPoin < 70) badgeColorClass = "poin-red";
-        else if (item.sisaPoin < 90) badgeColorClass = "poin-yellow";
+        if (item.sisaPoin <= 10) badgeColorClass = "poin-red";
+        else if (item.sisaPoin <= 50) badgeColorClass = "poin-yellow";
 
         div.innerHTML = `
           <div style="display: flex; flex-direction: column; max-width: 70%;">
